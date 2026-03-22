@@ -22,7 +22,7 @@ const Hero = () => {
                         Hi, I'm <span className="bg-gradient-to-r from-primary-600 to-indigo-500 bg-clip-text text-transparent">Astha Singhal</span>
                     </h1>
                     <p className="text-xl md:text-2xl text-slate-600 dark:text-slate-400 mb-8 max-w-2xl mx-auto">
-                        Full Stack Developer | Computer Science Student
+                        Software Developer | Computer Science Student
                     </p>
                     <p className="text-lg text-slate-500 dark:text-slate-500 mb-12 max-w-3xl mx-auto leading-relaxed">
                         Passionate about building scalable web applications and solving real-world problems using modern technologies.
@@ -39,7 +39,7 @@ const Hero = () => {
                         View Projects <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
                     </Link>
                     <a
-                        href="https://drive.google.com/file/d/1xn8aNm_01S_S6RpLVovOmLT5BkjYOG11/view?usp=sharing"
+                        href="https://drive.google.com/file/d/1iFk9m6CX2m1xS91E9AIYaHFDD4pEm8wu/view?usp=sharing"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center gap-2 glass px-8 py-3 rounded-xl font-semibold hover:bg-slate-100 dark:hover:bg-slate-800 transition-all"
@@ -63,7 +63,7 @@ const Hero = () => {
                     <a href="https://linkedin.com/in/astha-singhal" target="_blank" rel="noopener noreferrer" className="p-3 glass rounded-full hover:scale-110 transition-transform text-slate-700 dark:text-slate-300">
                         <Linkedin size={24} />
                     </a>
-                    <a href="mailto:astha@example.com" className="p-3 glass rounded-full hover:scale-110 transition-transform text-slate-700 dark:text-slate-300">
+                    <a href="mailto:singhalastha25@gmail.com" className="p-3 glass rounded-full hover:scale-110 transition-transform text-slate-700 dark:text-slate-300">
                         <Mail size={24} />
                     </a>
                 </motion.div>

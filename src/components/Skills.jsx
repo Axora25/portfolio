@@ -21,7 +21,7 @@ const Skills = () => {
         {
             title: 'Database',
             icon: <Database size={24} className="text-primary-500" />,
-            skills: ['MySQL']
+            skills: ['MySQL', 'MongoDB']
         },
         {
             title: 'Tools',
@@ -51,9 +51,9 @@ const Skills = () => {
     }
 
     return (
-        <section id="skills" className="py-24 bg-slate-100/50 dark:bg-slate-900/50 relative">
+        <section id="skills" className="pt-12 pb-12 relative">
             <div className="container mx-auto px-6">
-                <div className="flex flex-col items-center text-center mb-16">
+                <div className="flex flex-col items-center text-center mb-8">
                     <h2 className="text-4xl font-bold mb-4">My Skills</h2>
                     <div className="w-20 h-1.5 bg-primary-600 rounded-full"></div>
                 </div>

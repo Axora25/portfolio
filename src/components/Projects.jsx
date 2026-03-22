@@ -6,25 +6,25 @@ const Projects = () => {
         {
             title: 'AgriGrow',
             subtitle: 'Smart Agriculture Assistance Platform',
-            desc: 'A comprehensive platform featuring a crop recommendation system, 15-day weather forecast integration, and a community blogging module for farmers.',
-            tech: ['PHP', 'JavaScript', 'HTML', 'Tailwind', 'MySQL'],
-            github: 'https://github.com/astha-singhal/agrigrow',
-            demo: 'https://agrigrow-demo.example.com',
-            image: 'https://images.unsplash.com/photo-1523348830342-d0187cf0c180?q=80&w=2070&auto=format&fit=crop'
+            desc: 'An intelligent farming support platform that provides personalized crop recommendations based on soil data, real-time weather forecasts, and an AI-powered assistant for crop-related queries. Includes a community blog section where farmers can share knowledge and experiences.',
+            tech: ['React', 'JavaScript', 'Node.js', 'Tailwind', 'MongoDB'],
+            github: 'https://github.com/Axora25/react-node_project',
+            demo: 'https://agrigrow-two.vercel.app/',
+            image: '/crop.jpg'
         },
         {
             title: 'AssetAdvisor',
             subtitle: 'AI Investment Chatbot',
-            desc: 'An AI-powered chatbot designed for stock and mutual fund research. Integrated real-time financial APIs and reduced research time by 40%.',
+            desc: 'An AI-powered finance assistant that delivers real-time stock market insights using live financial APIs and answers investment-related queries in natural language. Designed to simplify stock research and improve decision-making efficiency.',
             tech: ['HTML', 'CSS', 'JavaScript', 'Python'],
-            github: 'https://github.com/astha-singhal/assetadvisor',
-            demo: 'https://assetadvisor-demo.example.com',
-            image: 'https://images.unsplash.com/photo-1611974717482-982c7cf08a8e?q=80&w=2070&auto=format&fit=crop'
+            github: 'https://github.com/Axora25/investment-boot',
+            demo: 'https://investment-bot-e10j.onrender.com/',
+            image: '/investmnt.jpg'
         }
     ]
 
     return (
-        <section id="projects" className="py-24 bg-slate-100/50 dark:bg-slate-900/50">
+        <section id="projects" className="pt-12 pb-12">
             <div className="container mx-auto px-6">
                 <div className="flex flex-col items-center text-center mb-16">
                     <h2 className="text-4xl font-bold mb-4">Featured Projects</h2>
@@ -82,11 +82,11 @@ const Projects = () => {
                                     {project.desc}
                                 </p>
 
-                                <div className="flex items-center gap-4">
+                                {/* <div className="flex items-center gap-4">
                                     <button className="flex items-center gap-2 text-primary-600 font-bold hover:gap-3 transition-all">
                                         View Details <ExternalLink size={16} />
                                     </button>
-                                </div>
+                                </div> */}
                             </div>
                         </motion.div>
                     ))}

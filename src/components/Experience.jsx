@@ -9,19 +9,20 @@ const Experience = () => {
             period: 'Feb 2026 – Present',
             location: 'Remote/Hybrid',
             desc: [
-                'Developed a civic engagement platform for online petitions.',
-                'Implemented authentication, petition creation, and dashboards.',
-                'Built responsive frontend with backend API integration.',
-                'Improved database performance and scalability.'
+                'Contributing to the development of a civic engagement platform that enables users to create and support digital petitions for public participation.',
+                'Implementing secure user authentication, petition creation workflows, and interactive dashboards to improve usability and engagement.',
+                'Developing responsive frontend components using React and integrating them with backend services through REST APIs.',
+                'Working with Node.js, Express, and MongoDB to manage application logic and optimize database performance.',
+                'Collaborating in a team-based environment using Git and following modular coding practices to ensure scalability and maintainability.'
             ],
             tech: ['React', 'Node.js', 'Express', 'MongoDB', 'Git', 'REST APIs']
         }
     ]
 
     return (
-        <section id="experience" className="py-24 relative">
-            <div className="container mx-auto px-6 max-w-4xl">
-                <div className="flex flex-col items-center text-center mb-16">
+        <section id="experience" className="pt-12 pb-24 relative">
+            <div className="container mx-auto px-6">
+                <div className="flex flex-col items-center text-center mb-8">
                     <h2 className="text-4xl font-bold mb-4">Work Experience</h2>
                     <div className="w-20 h-1.5 bg-primary-600 rounded-full"></div>
                 </div>
@@ -68,17 +69,6 @@ const Experience = () => {
                                         </li>
                                     ))}
                                 </ul>
-                            </div>
-
-                            <div>
-                                <h4 className="text-sm font-bold uppercase tracking-wider text-slate-400 mb-4">Tech Stack</h4>
-                                <div className="flex flex-wrap gap-2">
-                                    {exp.tech.map((t, tIdx) => (
-                                        <span key={tIdx} className="px-3 py-1 bg-primary-500/10 text-primary-600 dark:text-primary-400 rounded-full text-sm font-medium">
-                                            {t}
-                                        </span>
-                                    ))}
-                                </div>
                             </div>
                         </motion.div>
                     ))}

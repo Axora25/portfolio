@@ -10,10 +10,28 @@ const Contact = () => {
         message: ''
     })
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault()
-        alert('Thank you for your message! (Demo Only)')
-        setFormData({ name: '', email: '', subject: '', message: '' })
+        try {
+            const response = await fetch("https://formsubmit.co/ajax/singhalastha25@gmail.com", {
+                method: "POST",
+                headers: { 
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            });
+            
+            if (response.ok) {
+                alert('Thank you for your message! It has been sent.');
+                setFormData({ name: '', email: '', subject: '', message: '' });
+            } else {
+                alert('Oops! There was a problem sending your message. Please try again later.');
+            }
+        } catch (error) {
+            console.error(error);
+            alert('Oops! There was a problem sending your message. Please try again later.');
+        }
     }
 
     const handleChange = (e) => {
@@ -24,25 +42,25 @@ const Contact = () => {
         {
             icon: <Mail className="text-primary-500" />,
             label: 'Email',
-            value: 'astha.singhal@example.com',
-            link: 'mailto:astha.singhal@example.com'
+            value: 'singhalastha25@gmail.com',
+            link: 'mailto:singhalastha25@gmail.com'
         },
         {
             icon: <Linkedin className="text-primary-500" />,
             label: 'LinkedIn',
-            value: 'linkedin.com/in/astha-singhal',
-            link: 'https://linkedin.com/in/astha-singhal'
+            value: 'linkedin.com/in/asthasinghal58',
+            link: 'https://www.linkedin.com/in/asthasinghal58/'
         },
         {
             icon: <Github className="text-primary-500" />,
             label: 'GitHub',
-            value: 'github.com/astha-singhal',
-            link: 'https://github.com/astha-singhal'
+            value: 'github.com/Axora25',
+            link: 'https://github.com/Axora25'
         }
     ]
 
     return (
-        <section id="contact" className="py-24 bg-slate-100/50 dark:bg-slate-900/50">
+        <section id="contact" className="py-10 bg-slate-100/50 dark:bg-slate-900/50">
             <div className="container mx-auto px-6">
                 <div className="flex flex-col items-center text-center mb-16">
                     <h2 className="text-4xl font-bold mb-4">Contact Me</h2>
@@ -66,9 +84,9 @@ const Contact = () => {
                                 <div className="p-4 bg-primary-100 dark:bg-primary-900/30 rounded-2xl group-hover:scale-110 transition-transform">
                                     {info.icon}
                                 </div>
-                                <div>
+                                <div className="min-w-0 flex-1">
                                     <h4 className="text-sm font-bold uppercase tracking-wider text-slate-400">{info.label}</h4>
-                                    <p className="text-slate-800 dark:text-white font-medium">{info.value}</p>
+                                    <p className="text-sm xl:text-base text-slate-800 dark:text-white font-medium truncate" title={info.value}>{info.value}</p>
                                 </div>
                             </a>
                         ))}
@@ -80,62 +98,62 @@ const Contact = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5 }}
                         viewport={{ once: true }}
-                        className="lg:col-span-2 glass p-8 md:p-12 rounded-3xl"
+                        className="lg:col-span-2 glass p-6 md:p-8 rounded-2xl"
                     >
-                        <form onSubmit={handleSubmit} className="space-y-6">
-                            <div className="grid md:grid-cols-2 gap-6">
+                        <form onSubmit={handleSubmit} className="space-y-4">
+                            <div className="grid md:grid-cols-2 gap-4">
                                 <div>
-                                    <label className="block text-sm font-bold text-slate-500 dark:text-slate-400 mb-2 px-1">Full Name</label>
+                                    <label className="block text-sm font-bold text-slate-500 dark:text-slate-400 mb-1.5 px-1">Full Name</label>
                                     <input
                                         type="text"
                                         name="name"
                                         value={formData.name}
                                         onChange={handleChange}
                                         required
-                                        className="w-full bg-slate-100 dark:bg-slate-800 border-none rounded-xl px-6 py-4 outline-none focus:ring-2 focus:ring-primary-500 transition-all text-slate-800 dark:text-white"
+                                        className="w-full bg-slate-100 dark:bg-slate-800 border-none rounded-xl px-5 py-3 outline-none focus:ring-2 focus:ring-primary-500 transition-all text-slate-800 dark:text-white"
                                         placeholder="John Doe"
                                     />
                                 </div>
                                 <div>
-                                    <label className="block text-sm font-bold text-slate-500 dark:text-slate-400 mb-2 px-1">Email Address</label>
+                                    <label className="block text-sm font-bold text-slate-500 dark:text-slate-400 mb-1.5 px-1">Email Address</label>
                                     <input
                                         type="email"
                                         name="email"
                                         value={formData.email}
                                         onChange={handleChange}
                                         required
-                                        className="w-full bg-slate-100 dark:bg-slate-800 border-none rounded-xl px-6 py-4 outline-none focus:ring-2 focus:ring-primary-500 transition-all text-slate-800 dark:text-white"
+                                        className="w-full bg-slate-100 dark:bg-slate-800 border-none rounded-xl px-5 py-3 outline-none focus:ring-2 focus:ring-primary-500 transition-all text-slate-800 dark:text-white"
                                         placeholder="john@example.com"
                                     />
                                 </div>
                             </div>
                             <div>
-                                <label className="block text-sm font-bold text-slate-500 dark:text-slate-400 mb-2 px-1">Subject</label>
+                                <label className="block text-sm font-bold text-slate-500 dark:text-slate-400 mb-1.5 px-1">Subject</label>
                                 <input
                                     type="text"
                                     name="subject"
                                     value={formData.subject}
                                     onChange={handleChange}
                                     required
-                                    className="w-full bg-slate-100 dark:bg-slate-800 border-none rounded-xl px-6 py-4 outline-none focus:ring-2 focus:ring-primary-500 transition-all text-slate-800 dark:text-white"
+                                    className="w-full bg-slate-100 dark:bg-slate-800 border-none rounded-xl px-5 py-3 outline-none focus:ring-2 focus:ring-primary-500 transition-all text-slate-800 dark:text-white"
                                     placeholder="How can I help you?"
                                 />
                             </div>
                             <div>
-                                <label className="block text-sm font-bold text-slate-500 dark:text-slate-400 mb-2 px-1">Message</label>
+                                <label className="block text-sm font-bold text-slate-500 dark:text-slate-400 mb-1.5 px-1">Message</label>
                                 <textarea
                                     name="message"
                                     value={formData.message}
                                     onChange={handleChange}
                                     required
-                                    rows="5"
-                                    className="w-full bg-slate-100 dark:bg-slate-800 border-none rounded-xl px-6 py-4 outline-none focus:ring-2 focus:ring-primary-500 transition-all text-slate-800 dark:text-white resize-none"
+                                    rows="4"
+                                    className="w-full bg-slate-100 dark:bg-slate-800 border-none rounded-xl px-5 py-3 outline-none focus:ring-2 focus:ring-primary-500 transition-all text-slate-800 dark:text-white resize-none"
                                     placeholder="Your message here..."
                                 ></textarea>
                             </div>
                             <button
                                 type="submit"
-                                className="w-full md:w-auto bg-primary-600 hover:bg-primary-700 text-white font-bold px-10 py-4 rounded-xl transition-all shadow-lg hover:shadow-primary-500/25 flex items-center justify-center gap-2 group"
+                                className="w-full md:w-auto bg-primary-600 hover:bg-primary-700 text-white font-bold px-8 py-3 rounded-xl transition-all shadow-lg hover:shadow-primary-500/25 flex items-center justify-center gap-2 group mt-2"
                             >
                                 Send Message <Send size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                             </button>
