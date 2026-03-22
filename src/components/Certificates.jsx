@@ -78,7 +78,7 @@ const Certificates = () => {
                             whileInView={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 0.5, delay: idx * 0.1 }}
                             viewport={{ once: true }}
-                            className="w-[300px] md:w-[320px] lg:w-[350px] shrink-0 snap-center bg-slate-900/80 border border-slate-700/50 rounded-2xl flex flex-col items-center text-center group transition-all duration-300 relative overflow-hidden shadow-xl"
+                            className="w-[300px] md:w-[320px] lg:w-[350px] shrink-0 snap-center bg-slate-100 dark:bg-slate-900/80 border border-slate-300 dark:border-slate-700/50 rounded-2xl flex flex-col items-center text-center group transition-all duration-300 relative overflow-hidden shadow-xl"
                         >
                             <div className="w-full pt-10 pb-6 flex justify-center relative">
                                 <div className="absolute top-10 left-1/2 -translate-x-1/2 w-32 h-32 bg-primary-500/20 blur-2xl rounded-full"></div>
@@ -86,11 +86,11 @@ const Certificates = () => {
                             </div>
                             
                             <div className="px-6 pb-8 flex flex-col flex-1 w-full items-center">
-                                <h3 className="font-bold text-xl mb-3 bg-gradient-to-r from-primary-400 to-blue-500 bg-clip-text text-transparent line-clamp-2 min-h-[56px] flex items-center justify-center text-center">
+                                <h3 className="font-bold text-xl mb-3 text-primary-600 dark:text-primary-400 line-clamp-2 min-h-[56px] flex items-center justify-center text-center">
                                     {cert.title}
                                 </h3>
                                 
-                                <p className="text-slate-400 font-medium mb-8">
+                                <p className="text-slate-500 dark:text-slate-400 font-medium mb-8">
                                     {cert.issuer}
                                 </p>
                                 

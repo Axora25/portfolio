@@ -52,11 +52,11 @@ const Education = () => {
                             </div>
 
                             {/* Card content */}
-                            <div className="glass-card p-6 md:p-8 bg-slate-800/40 border border-slate-700/50 hover:bg-slate-800/60 transition-colors rounded-2xl">
-                                <div className="text-primary-400 font-mono text-sm mb-2">{item.period}</div>
-                                <h3 className="text-2xl font-bold text-primary-500 mb-1">{item.degree}</h3>
-                                <div className="text-lg font-bold text-slate-200 mb-3">{item.institution}</div>
-                                <p className="text-slate-400 leading-relaxed">{item.details}</p>
+                            <div className="glass-card p-6 md:p-8 bg-white/60 dark:bg-slate-800/40 border border-slate-200 dark:border-slate-700/50 hover:bg-white/80 dark:hover:bg-slate-800/60 transition-colors rounded-2xl">
+                                <div className="text-primary-500 dark:text-primary-400 font-mono text-sm mb-2">{item.period}</div>
+                                <h3 className="text-2xl font-bold text-primary-600 dark:text-primary-500 mb-1">{item.degree}</h3>
+                                <div className="text-lg font-bold text-slate-700 dark:text-slate-200 mb-3">{item.institution}</div>
+                                <p className="text-slate-600 dark:text-slate-400 leading-relaxed">{item.details}</p>
                             </div>
                         </motion.div>
                     ))}
